@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <title>全球回暖问题解决</title>
+    <style>
+        .wrapper {
+            text-align: center;
+            margin: 0 auto;
+            width: 80%;
+            border-style: dashed;
+        }
+    </style>
+    <body >
+        <div class="wrapper">
+            <h1>知识问答</h1>
+            <div style="width:50%; text-align: left; margin: 0 auto;">
+                <form>
+                    <h3 class="quetion_title">1. Choose your favorite Web language:</h3>
+                    <input type="radio" id="id1" name="name1" value="SHIT">
+                    <label for="id1">SHIT</label><br>
+                    <input type="radio" id="id2" name="name1" value="SHIT">
+                    <label for="id2">FUCK</label><br>
+
+                    <h3>2. Choose your favorite Web language:</h3>
+                    <input type="radio" id="id3" name="name2" value="SHIT">
+                    <label for="id3">SHIT</label><br>
+                    <input type="radio" id="id4" name="name2" value="SHIT">
+                    <label for="id4">FUCK</label><br>
+
+                    <h3>3. Choose your favorite Web language:</h3>
+                    <input type="radio" id="id5" name="name3" value="SHIT">
+                    <label for="id5">SHIT</label><br>
+                    <input type="radio" id="id6" name="name3" value="SHIT">
+                    <label for="id6">FUCK</label><br>
+
+                    <input type="button" onclick="check()" value="Submit">
+                </form>
+            </div>
+        </div>
+        <script>
+        function check() {
+            console.log(document.getElementById("id1").checked)
+        }
+
+        </script>
+    </body>
+</html>

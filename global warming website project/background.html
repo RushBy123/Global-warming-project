@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <title>Global warming problems</title>
+    <style>
+        .wrapper {
+            text-align: center;
+            margin: 0 auto;
+            width: 80%;
+
+        }
+
+        #left-box {
+            width: 49%;
+            height: 500px;
+            float: left;
+
+        }
+
+        #right-box {
+            width: 49%;
+            height: 500px;
+            float: right;
+            border-style:dashed;
+            background-color: white;
+        }
+        body {
+            background-image: url('images/back3.jpg');
+            background-size: cover;
+        }
+        .alert {
+            padding: 20px;
+            background-color: #f44336;
+            color: white;
+            opacity: 1;
+            transition: opacity 0.6s;
+            margin-bottom: 15px;
+        }
+        .alert.warning {background-color: #ff9800;}
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .closebtn:hover {
+            color: black;
+        }
+    </style>
+    <body >
+        <div class="alert warning">
+            <span class="closebtn">&times;</span>  
+            <h2>Click the images</h2>
+        </div>
+        <div class="wrapper">
+            <h1>Start game</h1>
+            <a href="#" onclick="history.back();">back</a>
+            <div class="content">
+                <div id="left-box">
+        
+                    <a onclick="show_earth()"><img src="images/f.jpg" width="400" height="400" id="image"></a><br>
+                    <a onclick="ShowShip();changeImage();"><img src="images/a.jpeg" width="200" height="200"></a>
+                    <a onclick="ShowTree();changeImage();"><img src="images/b.jpeg" width="200" height="200"></a>
+                    <a onclick="ShowHome();changeImage();"><img src="images/c.jpeg" width="200" height="200"></a>
+                    <a onclick="ShowCar();changeImage();"><img src="images/d.jpeg" width="200" height="200"></a>
+                    <a onclick="ShowPlane();changeImage();"><img src="images/e.jpeg" width="200" height="200"></a>
+
+                </div>
+                <div id="right-box">
+                    <p id="message"></p>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+
+
+<script>
+    function ShowShip() {
+        document.getElementById("message").innerHTML = "<h3>Information</h3><p>“Shipping emits about 10 million tons of carbon dioxide a year, or about 3.1% of the world's annual CO2 emissions. Even more than airplanes. Shipping also contributes to climate change by emitting black carbon, tiny black particles produced by burning ocean fuels. Black carbon accounts for 21% of the carbon dioxide equivalent emitted by ships, making it the second biggest driver of their impact on climate after carbon dioxide. There are currently no regulations to control black carbon emissions from ships.” (https://www.transportenvironment.org/challenges/ships/greenhouse-gases/#:~: text=Shipping%20also%20contributes%20to%20climate, ships%20burning%20heavy%20fuel%20oil.)</p>"
+    }
+
+    function ShowTree() {
+        document.getElementById("message").innerHTML = "<h3>Information</h3>Deforestation, and as a result, farming and agriculture Trees and plants are guards of our planet, for they absorb the CO2 we emitted by photosynthesis and reduced the greenhouse gases The clearing of forests to clear land is mainly for farming, cultivation and livestock raising. There is a large amount of livestock produced gas called methane clustered in the atmosphere, and cows are one of the big contributors.<h3>Improvement</h3><p>In order to reduce deforestation, we can use fewer products that require trees. We can save paper, do not use disposable chopsticks, use more electronic documents and less paper documents. We can appeal to people to protect the natural environment. Perhaps governments also need to control deforestation by making laws.</p>"
+    }
+
+    function ShowHome() {
+        document.getElementById("message").innerHTML = "<h3>Information</h3> “The energy supply sector (electricity, heat and other energy) is the largest contributor to global greenhouse gases emissions, accounting for approximately 35% Households consume 29% of the world's energy and contribute 21% of carbon dioxide emissions. Most of the energy in a home is used for heating and cooling.” (https://www.un.org/en/actnow/facts-and-figures#energy)<h3>Improvement</h3><p>Electricity is the biggest energy consumer. To reduce electricity consumption, we can use energy-saving light bulbs. It also saves a lot of money. We can turn off the lights when we don't need them. Unplug electronic devices and appliances when not in use.</p> <p>Most of the world's energy consumption comes from generating electricity from fossil fuels. If we can change the way we produce energy, that means less pollution because fossil fuels are the most polluting. We can switch to solar, wind or hydro power.</p>"
+    }
+
+    function ShowCar() {
+        document.getElementById("message").innerHTML = "<h3>Information</h3>Cars and trucks account for 15% of greenhouse gas emissions in the United States. Every gallon of gasoline produced emits about 24 pounds of carbon dioxide and other greenhouse gases.<h3>Improvement</h3><p>Most vehicles now run on diesel and petrol. Walking or biking instead of driving will reduce greenhouse gas emissions and contribute to your health and fitness. Taking the subway, train and so on is also a good choice.</p><p>Maybe there will be more clean fuels in the future. Clean fuel is made from cellulosic biofuels. They can reduce emissions by 80%. Electric cars use electricity as an energy source, so they have fewer emissions than other cars.</p>"
+    }
+
+    function ShowPlane() {
+        document.getElementById("message").innerHTML = "<h3>Information</h3>“Global aviation (including domestic and international; passenger and freight) accounts for: <p>1.9% of greenhouse gas emissions (which includes all greenhouse gases, not only CO2); </p> <p>2.5% of CO2 emissions; </p> <p>3.5% of ‘effective radiative forcing’ – a closer measure of its impact on warming.”</p>(https://ourworldindata.org/co2-emissions-from-aviation)"
+    }
+
+    var close = document.getElementsByClassName("closebtn");
+    var i;
+
+    for (i = 0; i < close.length; i++) {
+    close[i].onclick = function(){
+    var div = this.parentElement;
+    div.style.opacity = "0";
+    setTimeout(function(){ div.style.display = "none"; }, 600);
+    }
+    function changeImage()
+    {
+    var img = document.getElementById("image");
+    img.src="images/g.jpg";
+    return false;
+    }
+}
+</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <title>全球回暖问题解决</title>
+    <style>
+        .wrapper {
+            text-align: center;
+            margin: 0 auto;
+            width: 80%;
+            border-style: dashed;
+        }
+
+        #left-box {
+            width: 49%;
+            height: 500px;
+            float: left;
+            background-color: aqua;
+            border-style: dashed;
+        }
+
+        #right-box {
+            width: 49%;
+            height: 500px;
+            float: right;
+            background-color: aquamarine;
+            border-style: dashed;
+        }
+    </style>
+    <body >
+        <div class="wrapper">
+            <h1>背景知识</h1>
+
+            <div class="content">
+                <div id="left-box">
+                    <a onclick="ShowMessage()"><img src="car_on_earth.png" width="300" height="300"></a>
+                    <br>
+                    <button onclick="ShowMessage()">CLICK ME!</button>
+                </div>
+                <div id="right-box">
+                    <p id="message"></p>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+
+
+<script>
+    function ShowMessage() {
+        document.getElementById("message").innerHTML = "fdsfdsfdsfdsfdsfdsfsdfdsfds"
+    }
+
+</script>
+</html>
